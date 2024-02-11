@@ -1,0 +1,60 @@
+@function vw($size) {
+    @return ($size / (1920 * 0.01 * 1px)) * 1vw;
+}
+
+@function vh($size) {
+    @return ($size / (1080 * 0.01 * 1px)) * 1vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    padding: vh(32px) vh(48px);
+    box-shadow: 0px 2.983px 7.456px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+    width: vw(200px);
+}
+
+.main {
+    padding-top: vh(100px);
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .main-img {
+            width: 60vw;
+        }
+    }
+
+    h1 {
+        padding: vh(20px) vw(80px);
+        color: #000;
+        font-family: Poppins;
+        font-size: 2.5em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%; /* 39.6px */
+    }
+
+    h4 {
+        padding-left: vw(80px);
+        color: #222;
+        font-family: Poppins;
+        font-size: 1.5em;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 110%; /* 17.6px */
+    }
+}
