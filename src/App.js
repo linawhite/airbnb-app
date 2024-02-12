@@ -11,13 +11,13 @@ function App() {
             <Card
                 key={card.id}
                 title={card.title}
-                status={card.status}
                 price={card.price}
                 img={`./images/${card.coverImg}`}
                 starsAmount={card.stats.rating}
                 reviewsAmount={card.stats.reviewCount}
                 country={card.location}
                 measure={card.measure}
+                openSpots={card.openSpots}
             />
         );
     });

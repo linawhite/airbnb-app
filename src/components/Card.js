@@ -28,7 +28,9 @@ export default function Card(props) {
                     className='card--background-img'
                     alt='background of card'
                 />
-                <div className='card--background-status'>{props.status}</div>
+                {props.openSpots == 0 && (
+                    <div className='card--background-status'>SOLD OUT</div>
+                )}
             </div>
 
             <div className='card--review'>
