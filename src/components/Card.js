@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Card(props) {
     let badgeText = '';
-    const location = props.location.toLowerCase();
+    const location = props.card.location.toLowerCase();
     if (props.openSpots === 0) {
         badgeText = 'SOLD OUT';
     } else if (location === 'online') {
@@ -13,12 +13,12 @@ export default function Card(props) {
         <div className='card'>
             <div className='card--background'>
                 <img
-                    src={props.img}
+                    src={`./images/${props.card.coverImg}`}
                     className='card--background-img'
                     alt='background of card'
                 />
 
-                {badgeText.length >= 1 && (
+                {badgeText && (
                     <div className='card--background-status'>{badgeText}</div>
                 )}
             </div>
@@ -31,16 +31,18 @@ export default function Card(props) {
                         alt='star'
                     />
                     <p className='card--review-stars-amount'>
-                        {props.starsAmount}
+                        {props.card.stats.rating}
                     </p>
                 </div>
-                <p className='card--review-amount'>({props.reviewsAmout})</p>
+                <p className='card--review-amount'>
+                    ({props.card.stats.reviewCount})
+                </p>
                 <p className='card--review-spliter'>.</p>
-                <p className='card--review-country'>{props.location}</p>
+                <p className='card--review-country'>{props.card.location}</p>
             </div>
-            <h3 className='card--title'>{props.title}</h3>
+            <h3 className='card--title'>{props.card.title}</h3>
             <p className='card--price'>
-                <span>From {props.price} </span>/ {props.measure}
+                <span>From {props.card.price} </span>/ {props.card.measure}
             </p>
         </div>
     );
