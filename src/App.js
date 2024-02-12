@@ -15,7 +15,7 @@ function App() {
                 img={`./images/${card.coverImg}`}
                 starsAmount={card.stats.rating}
                 reviewsAmount={card.stats.reviewCount}
-                country={card.location}
+                location={card.location}
                 measure={card.measure}
                 openSpots={card.openSpots}
             />
