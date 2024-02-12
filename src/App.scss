@@ -58,3 +58,69 @@ body {
         line-height: 110%; /* 17.6px */
     }
 }
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card {
+    line-height: 0;
+    padding: 18px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .card--background {
+        position: relative;
+        .card--background-status {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+
+            padding: 10px 6px;
+            background-color: #ffffff;
+            border-radius: 2px;
+
+            font-size: 0.625rem;
+        }
+        .card--background-img {
+            width: 100%;
+        }
+    }
+
+    .card--title,
+    .card--price,
+    .card--review {
+        font-size: 0.75rem;
+        color: #222222;
+    }
+
+    .card--review {
+        display: flex;
+        color: #918e9b;
+        gap: 2px;
+        .card--review-stars {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            .card--review-star {
+                width: 14px;
+            }
+            .card--review-stars-amount {
+                color: #222222;
+            }
+        }
+    }
+
+    .card--title {
+        font-weight: 300;
+    }
+
+    .card--price {
+        span {
+            font-weight: 600;
+        }
+        font-weight: 300;
+    }
+}
